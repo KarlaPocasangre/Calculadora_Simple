@@ -1,29 +1,30 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main()
 {
-    //Karla Estefany Hernandez Pocasangre
-
-    //Declaracion de variables
-    int dig1, dig2, suma, resta, mult, division;
+    // Declaracion de variables
+    float dig1, dig2, suma, resta, mult, division, potenciacion, radicacion1, radicacion2;
     char opcion;
 
-    //INgreso de datos
+    // INgreso de datos
     cout << "Ingrese 2 digitos" << endl;
     cin >> dig1;
     cin >> dig2;
 
-    //Menu
+    // Menu
     cout << "\nMENU" << endl;
     cout << "Suma= +" << endl;
     cout << "Resta= -" << endl;
     cout << "Multiplicacion= *" << endl;
     cout << "Division= /" << endl;
+    cout << "Potenciacion= p" << endl;
+    cout << "Radicacion= r" << endl;
     cout << "Elija una operacion: ";
     cin >> opcion;
 
-    //Salida de Datos
+    // Salida de Datos
     switch (opcion)
     {
     case '+':
@@ -41,6 +42,16 @@ int main()
     case '/':
         division = (dig1 / dig2);
         cout << "\nEl resultado de la divison es: " << division << endl;
+        break;
+    case 'p':
+        potenciacion = pow(dig1, dig2);
+        cout << "\nEl resultado de " << dig1 << " Potenciado a " << dig2 << " es: " << potenciacion << endl;
+        break;
+    case 'r':
+        radicacion1 = sqrt(dig1);
+        radicacion2 = sqrt(dig2);
+        cout << "\nEl resultado de " << dig1 << " es: " << radicacion1 << endl;
+        cout << "El resultado de " << dig2 << " es: " << radicacion2 << endl;
         break;
     default:
         cout << "\nIntrodusca un signo valido" << endl;
